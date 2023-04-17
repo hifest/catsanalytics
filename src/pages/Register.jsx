@@ -1,17 +1,21 @@
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 import {useState} from "react";
+import { useNavigate } from "react-router-dom";
 
 const Register = () => {
     const [email,setEmail] = useState('');
     const [password,setPassword] = useState('');
 
-    const handleClick = (email: string, password: string)=>{
+    let navigate = useNavigate();
+
+    const handleClick = ()=>{
         const auth = getAuth();
 
         createUserWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
                 // Signed in
                 const user = userCredential.user;
+                navigate('/')
             })
             .catch((error) => {
                 const errorCode = error.code;

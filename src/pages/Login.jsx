@@ -8,7 +8,7 @@ const Login = () => {
     const [email,setEmail] = useState('');
     const [password,setPassword] = useState('');
 
-    const handleClick = (email: string, password: string)=>{
+    const handleClick = ()=>{
         const auth = getAuth();
 
         signInWithEmailAndPassword(auth, email, password)

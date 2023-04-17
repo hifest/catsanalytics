@@ -1,14 +1,22 @@
 import {createSlice} from "@reduxjs/toolkit";
 
-const catSlice = createSlice({
-    name: "cat",
-    initialState: {},
+const initialState = {
+    email: '',
+    emailVerified: '',
+    uid: ''
+}
+
+const userSlice = createSlice({
+    name: "user",
+    initialState,
     reducers:{
-        addCat(state,action){
-            console.log(state,action)
+        addUser(state,action){
+            state.uid = action.payload.uid
+            state.email = action.payload.email
+            state.emailVerified = action.payload.emailVerified
         }
     }
 })
-
-export const {addCat} = catSlice.actions;
-export default catSlice.reducer
+//єбать ти лох
+export const {addUser} = userSlice.actions;
+export default userSlice.reducer
