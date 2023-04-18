@@ -2,11 +2,7 @@ import { getAuth, signOut } from "firebase/auth";
 
 const Signout = () => {
     const auth = getAuth();
-    signOut(auth).then((state) => {
-
-    }).catch((error) => {
-
-    });
+    signOut(auth).then()
 }
 
 export default Signout;

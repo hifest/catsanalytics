@@ -6,19 +6,17 @@ import {addUser} from "./store/slices/userSlice";
 import './scss/main.scss';
 import Header from "./components/Header";
 import Spinner from "./loader/Spinner.jsx";
+
 function App() {
     let navigate = useNavigate();
     const dispatch = useDispatch()
     const [spinner,setSpinner] = useState(true)
+
     useEffect(()=>{
         const auth = getAuth();
         onAuthStateChanged(auth, (user) => {
             setSpinner(false)
-            if (user) {
-                dispatch(addUser(user))
-            } else {
-                navigate('/register')
-            }
+            user ? dispatch(addUser(user)) : navigate('/register')
         });
     },[])
 

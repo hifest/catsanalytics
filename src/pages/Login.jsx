@@ -12,17 +12,9 @@ const Login = () => {
         const auth = getAuth();
 
         signInWithEmailAndPassword(auth, email, password)
-            .then((userCredential) => {
-                const user = userCredential.user;
-                console.log(user)
+            .then(() => {
                 navigate('/')
             })
-            .catch((error) => {
-                console.log(error)
-                const errorCode = error.code;
-                const errorMessage = error.message;
-            });
-
     }
 
     return (
@@ -39,7 +31,7 @@ const Login = () => {
                    minLength={5}
                    placeholder={'password'}/>
 
-            <button className="button-4" role="button" onClick={()=> handleClick(email,password)}>Вхід</button>
+            <button className="button-4" onClick={()=> handleClick(email,password)}>Вхід</button>
         </div>
     );
 };

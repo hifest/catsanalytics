@@ -13,15 +13,8 @@ const Register = () => {
 
         createUserWithEmailAndPassword(auth, email, password)
             .then((userCredential) => {
-                // Signed in
-                const user = userCredential.user;
                 navigate('/')
             })
-            .catch((error) => {
-                const errorCode = error.code;
-                const errorMessage = error.message;
-                // ..
-            });
 
     }
 
@@ -41,7 +34,7 @@ const Register = () => {
                    minLength={5}
                    placeholder={'password'}/>
 
-            <button className="button-4" role="button" onClick={()=> handleClick(email,password)}>Зареєструватись</button>
+            <button className="button-4"  onClick={()=> handleClick(email,password)}>Зареєструватись</button>
         </form>
     );
 };

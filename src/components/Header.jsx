@@ -4,8 +4,7 @@ import React from "react";
 import Box from "@mui/material/Box";
 import AppBar from "@mui/material/AppBar";
 import Toolbar from "@mui/material/Toolbar";
-import IconButton from "@mui/material/IconButton";
-import MenuIcon from "@mui/icons-material/Menu";
+
 import Button from "@mui/material/Button";
 
 import Home from "../pages/Home";
@@ -13,29 +12,21 @@ import Register from "../pages/Register.jsx";
 import Login from "../pages/Login.jsx";
 import Signout from "../pages/Signout";
 
-import { useSelector } from 'react-redux'
+import UseAuth from "../tools/UseAuth";
 
 const Header = () => {
-    const uid = useSelector((state) => state.user.uid)
+    const isLoggedIn = UseAuth();
+
     return (
         <>
             <Box sx={{ flexGrow: 1}}>
                 <AppBar position="static">
                     <Toolbar>
-                        {/*<IconButton*/}
-                        {/*    size="large"*/}
-                        {/*    edge="start"*/}
-                        {/*    color="inherit"*/}
-                        {/*    aria-label="menu"*/}
-                        {/*    sx={{ mr: 2 }}*/}
-                        {/*>*/}
-                        {/*    <MenuIcon />*/}
-                        {/*</IconButton>*/}
                         <div className={"sb"}>
-                            <Button color="inherit"><Link className="nav-btn" to={"/"}>Додому</Link></Button>
-                            {uid ?
+                            {isLoggedIn ?
                                 <>
                                     <Button color="inherit"><Link className="nav-btn" to={"/signout"}>Вийти</Link></Button>
+                                    <Button color="inherit"><Link className="nav-btn" to={"/"}>Додому</Link></Button>
                                 </>
                                 : <>
                                     <Button color="inherit"><Link className="nav-btn" to={"/register"}>Реєстрація</Link></Button>
