@@ -18,7 +18,7 @@ const Login = () => {
     }
 
     return (
-        <div>
+        <div className="form">
             <input type="email"
                    value={email}
                    onChange={(e)=> setEmail(e.target.value)}
