@@ -11,6 +11,7 @@ import Button from "@mui/material/Button";
 import Home from "../pages/Home";
 import Register from "../pages/Register.jsx";
 import Login from "../pages/Login.jsx";
+import Signout from "../pages/Signout";
 
 import { useSelector } from 'react-redux'
 
@@ -31,12 +32,15 @@ const Header = () => {
                         {/*    <MenuIcon />*/}
                         {/*</IconButton>*/}
                         <div className={"sb"}>
-                            <Button color="inherit"><Link to={"/"}>Додому</Link></Button>
+                            <Button color="inherit"><Link className="nav-btn" to={"/"}>Додому</Link></Button>
                             {uid ?
                                 <>
+                                    <Button color="inherit"><Link className="nav-btn" to={"/signout"}>Вийти</Link></Button>
                                 </>
-                                : <><Button color="inherit"><Link to={"/register"}>Реєстрація</Link></Button>
-                                    <Button color="inherit"><Link to={"/login"}>Вхід</Link></Button></>}
+                                : <>
+                                    <Button color="inherit"><Link className="nav-btn" to={"/register"}>Реєстрація</Link></Button>
+                                    <Button color="inherit"><Link className="nav-btn" to={"/login"}>Вхід</Link></Button>
+                                </>}
 
                         </div>
                     </Toolbar>
@@ -44,6 +48,7 @@ const Header = () => {
             </Box>
 
             <Routes>
+                <Route path={"/signout"} element={<Signout/>}/>
                 <Route path={"/"} element={<Home/>}/>
                 <Route path={"/register"} element={<Register/>}/>
                 <Route path={"/login"} element={<Login/>}/>

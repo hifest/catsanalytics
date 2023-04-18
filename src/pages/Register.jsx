@@ -29,6 +29,7 @@ const Register = () => {
         <form>
 
             <input type="email"
+            id="standard-basic" label="Standard" variant="standard"
                    value={email}
                    onChange={(e)=> setEmail(e.target.value)}
                    minLength={7}
@@ -40,7 +41,7 @@ const Register = () => {
                    minLength={5}
                    placeholder={'password'}/>
 
-            <button onClick={()=> handleClick(email,password)}>Зареєструватись</button>
+            <button className="button-4" role="button" onClick={()=> handleClick(email,password)}>Зареєструватись</button>
         </form>
     );
 };

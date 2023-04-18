@@ -39,7 +39,7 @@ const Login = () => {
                    minLength={5}
                    placeholder={'password'}/>
 
-            <button onClick={()=> handleClick(email,password)}>Вхід</button>
+            <button className="button-4" role="button" onClick={()=> handleClick(email,password)}>Вхід</button>
         </div>
     );
 };

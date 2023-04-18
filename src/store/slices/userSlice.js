@@ -17,6 +17,6 @@ const userSlice = createSlice({
         }
     }
 })
-//єбать ти лох
+//сам ти лох, сука
 export const {addUser} = userSlice.actions;
 export default userSlice.reducer
