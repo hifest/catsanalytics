@@ -1,7 +1,6 @@
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 import {useState} from "react";
 import { useNavigate } from "react-router-dom";
-import { ObjectGenerator } from "../generators/btnGenerator"
 
 const Register = () => {
     const [email,setEmail] = useState('');
