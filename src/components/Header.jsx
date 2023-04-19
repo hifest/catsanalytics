@@ -13,6 +13,7 @@ import Login from "../pages/Login.jsx";
 import Signout from "../pages/Signout";
 
 import UseAuth from "../tools/UseAuth";
+import DashBoard from "./DashBoard";
 
 const Header = () => {
     const isLoggedIn = UseAuth();
@@ -21,19 +22,22 @@ const Header = () => {
         <>
             <Box sx={{ flexGrow: 1}}>
                 <AppBar position="static">
-                    <Toolbar>
-                        <div className={"sb"}>
+                    <Toolbar className="sb">
+                        <>
                             {isLoggedIn ?
                                 <>
-                                    <Button color="inherit"><Link className="nav-btn" to={"/signout"}>Вийти</Link></Button>
-                                    <Button color="inherit"><Link className="nav-btn" to={"/"}>Додому</Link></Button>
+                                    <div>
+                                        <Button color="inherit"><Link className="nav-btn" to={"/signout"}>Вийти</Link></Button>
+                                        <Button color="inherit"><Link className="nav-btn" to={"/"}>Додому</Link></Button>
+                                    </div>
+                                    <DashBoard/>
                                 </>
                                 : <>
                                     <Button color="inherit"><Link className="nav-btn" to={"/register"}>Реєстрація</Link></Button>
                                     <Button color="inherit"><Link className="nav-btn" to={"/login"}>Вхід</Link></Button>
                                 </>}
 
-                        </div>
+                        </>
                     </Toolbar>
                 </AppBar>
             </Box>

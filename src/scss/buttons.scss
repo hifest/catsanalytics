@@ -3,7 +3,7 @@
 
 // }
 .addcat{
-  @include margin-with-important(top,20px,true);
+  color: white !important;
   background: rgb(108 57 155) !important;
   box-shadow: -5px 2px 46px -3px rgba(199,32,199,1) !important;
   &:hover{
