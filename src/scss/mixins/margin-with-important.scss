@@ -5,8 +5,8 @@ $margin-types: (
         left: margin-left,
 );
 
-@mixin margin-with-important($type, $value) {
-  $important: !important;
+@mixin margin-with-important($type, $value, $important: true) {
+  $important-value: if($important, '!important', '');
   $margin-type: map-get($margin-types, $type);
-  #{$margin-type}: $value $important;
+  #{$margin-type}: $value #{$important-value};
 }
