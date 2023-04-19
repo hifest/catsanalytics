@@ -1,7 +1,11 @@
+import Button from "@mui/material/Button";
+
 const Home = () => {
     return (
-        <div>
-
+        <div className="container">
+            <div className="df jcc">
+                <Button variant="contained" className="addcat">Добавити кота</Button>
+            </div>
         </div>
     );
 };

@@ -1,0 +1,12 @@
+$margin-types: (
+        top: margin-top,
+        right: margin-right,
+        bottom: margin-bottom,
+        left: margin-left,
+);
+
+@mixin margin-with-important($type, $value) {
+  $important: !important;
+  $margin-type: map-get($margin-types, $type);
+  #{$margin-type}: $value $important;
+}
