@@ -19,7 +19,7 @@ const Register = () => {
     }
 
     return (
-        <div className="form">
+        <form className="form">
 
             <input type="email"
                     id="standard-basic" 
@@ -40,7 +40,7 @@ const Register = () => {
             className="button-4"  
             onClick={()=> handleClick(email,password)}
             >Зареєструватись</button>
-        </div>
+        </form>
     );
 };
 
