@@ -1,0 +1,63 @@
+@import "./mixins/auto-size";
+
+$input-background: rgba(57, 63, 84, 0.8);
+$input-text-inactive: #7881A1;
+$input-text-active: #BFD2FF;
+
+// gradient animation
+@keyframes gradient {
+  0%{background-position:0 0}
+  100%{background-position:100% 0}
+}
+
+.webflow-style-input {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  margin: 10px;
+  width: 100%;
+  border-radius: 2px;
+  padding: 8px;
+  background: $input-background;
+  &:after {
+    content: "";
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    z-index: 999;
+    height: 2px;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+    background: linear-gradient(to right, #B294FF, #57E6E6, #FEFFB8, #57E6E6, #B294FF, #57E6E6) 0 0%;
+    background-size: 500% auto;
+    animation: gradient 3s linear infinite;
+  }
+}
+
+.webflow-style-input input {
+  border-style: none;
+  background: transparent;
+  outline: none;
+  flex-grow: 1;
+  color: $input-text-active;
+  font-size: 15px;
+  line-height: 30px;
+  vertical-align: middle;
+  &::-webkit-input-placeholder {
+    color: $input-text-inactive;
+  }
+}
+
+
+.input-reg-sign {
+  width: 14%;
+  display: block;
+  color: white;
+  padding: 14px 20px;
+  outline: none;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}

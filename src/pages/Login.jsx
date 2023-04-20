@@ -20,12 +20,14 @@ const Login = () => {
     return (
         <div className="form">
             <input type="email"
+                   className="input-reg-sign"
                    value={email}
                    onChange={(e)=> setEmail(e.target.value)}
                    minLength={7}
                    placeholder={'email'}/>
 
             <input type="password"
+                   className="input-reg-sign"
                    value={password}
                    onChange={(e)=>setPassword(e.target.value)}
                    minLength={5}

@@ -25,6 +25,7 @@ const Register = () => {
                     id="standard-basic" 
                     label="Standard" 
                     variant="standard"
+                    className="input-reg-sign"
                     value={email}
                     onChange={(e)=> setEmail(e.target.value)}
                     minLength={7}
@@ -32,6 +33,7 @@ const Register = () => {
 
             <input type="password"
                    value={password}
+                   className="input-reg-sign"
                    onChange={(e)=>setPassword(e.target.value)}
                    minLength={5}
                    placeholder={'password'}/>

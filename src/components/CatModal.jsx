@@ -3,6 +3,7 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
 import Backdrop from '@mui/material/Backdrop';
+import CreateCat from "./CreateCat";
 
 const style = {
     position: 'absolute',
@@ -36,11 +37,11 @@ export default function CatModal({active,setActive}) {
                 slots={{ backdrop: Backdrop }}
             >
                 <Box sx={style}>
-                    <Typography id="modal-modal-title" variant="h6" component="h2" style={{textAlign:"center"}}>
+                    <Typography id="modal-modal-title" variant="h6" component="h2" style={{textAlign:"center", color:"white"}}>
                         Добав нового кота
                     </Typography>
                     <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-                        тут буде інтерактив
+                        <CreateCat handleClose={handleClose}/>
                     </Typography>
                 </Box>
             </Modal>
