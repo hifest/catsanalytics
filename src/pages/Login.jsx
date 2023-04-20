@@ -18,7 +18,7 @@ const Login = () => {
     }
 
     return (
-        <form className="form">
+        <div className="form">
             <input type="email"
                    value={email}
                    onChange={(e)=> setEmail(e.target.value)}
@@ -32,7 +32,7 @@ const Login = () => {
                    placeholder={'password'}/>
 
             <button className="button-4" onClick={()=> handleClick(email,password)}>Вхід</button>
-        </form>
+        </div>
     );
 };
 
