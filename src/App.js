@@ -6,6 +6,8 @@ import {addUser} from "./store/slices/userSlice";
 import './scss/main.scss';
 import Header from "./components/Header";
 import Spinner from "./loader/Spinner.jsx";
+import CurrencyConverter from "./components/Converter";
+
 
 function App() {
     let navigate = useNavigate();
@@ -26,6 +28,7 @@ function App() {
                 : <>
                     <div className={'main'}>
                         <Header/>
+                        {/*<CurrencyConverter/>*/}
                     </div>
                 </>
 
