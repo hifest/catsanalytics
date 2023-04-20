@@ -86,15 +86,6 @@ input {
   border-radius: 4px;
   cursor: pointer;
 }
-  .form {
-    // position: relative; top: calc(50% /2);
-    // left: calc(50% /2);
-    // display: inline-block;
-    display: flex; // FlexBox
-    align-items: center; // выравнивает по вертикали 
-    justify-content: center; //выравнивает по горизонтали
-    flex-direction: column;
-  }
 
 @import "./spinner";
 @import "./buttons";
