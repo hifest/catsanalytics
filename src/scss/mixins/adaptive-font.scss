@@ -1,0 +1,14 @@
+@mixin adaptive-font($min-size, $max-size, $max-width: 1200px) {
+  $font-range: $max-size - $min-size;
+  $viewport-range: $max-width - 320px; // використовуємо заданий максимальний розмір екрану
+  $font-viewport-ratio: $font-range / $viewport-range;
+  font-size: $min-size;
+
+  @media (min-width: 320px) {
+    font-size: calc(#{$min-size} + (100vw - 320px) * #{$font-viewport-ratio});
+  }
+
+  @media (min-width: $max-width) {
+    font-size: $max-size;
+  }
+}

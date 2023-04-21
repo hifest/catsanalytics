@@ -1,4 +1,4 @@
-@import "./mixins/auto-size";
+@import "./mixins/adaptive-font";
 
 $input-background: rgba(57, 63, 84, 0.8);
 $input-text-inactive: #7881A1;
@@ -41,7 +41,7 @@ $input-text-active: #BFD2FF;
   outline: none;
   flex-grow: 1;
   color: $input-text-active;
-  font-size: 15px;
+  @include adaptive-font(11px, 16px);
   line-height: 30px;
   vertical-align: middle;
   &::-webkit-input-placeholder {

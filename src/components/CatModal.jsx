@@ -36,7 +36,7 @@ export default function CatModal({active,setActive}) {
                 }}
                 slots={{ backdrop: Backdrop }}
             >
-                <Box sx={style}>
+                <Box sx={style} style={{width: "50%"}}>
                     <Typography id="modal-modal-title" variant="h6" component="h2" style={{textAlign:"center", color:"white"}}>
                         Добав нового кота
                     </Typography>
