@@ -1,17 +1,31 @@
+@import "./mixins/responsive-width";
+:root {
+  --gradient-shadow:linear-gradient(45deg, #fb0094, #0000ff, #00ff00, #ffff00, #ff0000, #fb0094, #0000ff, #00ff00, #ffff00, #ff0000);
+}
+
+
 .box-card {
-  width: 181px;
-  height: 254px;
-    background-color: #52dbff;
-    border-radius: 5px;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    margin: 78px 0px 0px 66px;
+  flex-shrink: 0;
+    height: 400px;
+    font-family: 'Roboto', sans-serif;
+    @include responsive-width(500px);
+    margin: 20px auto;
+    border-radius:15px;
+    color: white;
+    background: #101010;
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9bc635', endColorstr='#c0ea67',GradientType=1 );
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    -webkit-box-shadow: 10px 10px 38px 0 rgba(199,179,199,1);
+    -moz-box-shadow: 10px 10px 38px 0 rgba(199,179,199,1);
+    box-shadow: 10px 10px 38px 0 rgba(199,179,199,1);
+    transition: .3s all;
+  &:hover{
+    transform: scale(1.07)
+  }
   }
   .list-li {
     font-size: 22px;
     font-weight: 900;
   }
-  
