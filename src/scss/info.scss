@@ -10,7 +10,7 @@
     font-family: 'Roboto', sans-serif;
     @include responsive-width(500px);
     margin: 20px auto;
-    border-radius:15px;
+    border-radius:32px;
     color: white;
     background: #101010;
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9bc635', endColorstr='#c0ea67',GradientType=1 );
@@ -28,4 +28,5 @@
   .list-li {
     font-size: 22px;
     font-weight: 900;
+    padding-left: 15px;
   }

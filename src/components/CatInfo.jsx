@@ -25,12 +25,12 @@ const CatInfo = ({ catId }) => {
     <div  className="df fww gg2">
       {catData && Object.entries(catData).map(([key, value]) => (
         <div className="box-card" key={key}>
-          <h2 className="list-li">{value.name}</h2>
-          <div className="list-li">{value.power}</div>
-          <div className="list-li">{value.endurance}</div>
-          <div className="list-li">{value.speed}</div>
-          <div className='list-li'>{value.level}</div>
-          <div className={`${value.rare === 'Простий' ? 'gray' : value.rare === 'Незвичайний' ? 'green' : value.rare === 'Рідкісний' ? 'blue' : value.rare === 'Епічний' ? 'purple' : value.rare === 'Легендарний' ? 'gold' : 'high-level'} list-li`}>{value.rare}</div>
+          <h2 className="list-li">Name: {value.name}</h2>
+          <div className="list-li">Power: {value.power}</div>
+          <div className="list-li">Endurance: {value.endurance}</div>
+          <div className="list-li">Speed: {value.speed}</div>
+          <div className='list-li'>Level: {value.level}</div>
+          <div className={`${value.rare === 'Простий' ? 'gray' : value.rare === 'Незвичайний' ? 'green' : value.rare === 'Рідкісний' ? 'blue' : value.rare === 'Епічний' ? 'purple' : value.rare === 'Легендарний' ? 'gold' : 'high-level'} list-li`}>Rare: {value.rare}</div>
         </div>
       ))}
     </div>
